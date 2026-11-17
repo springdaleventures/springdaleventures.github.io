@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Springdale Ventures</title>
+<script>
+// Old WordPress addresses (/about/, /team/, /brands/, /contact/) land here on GitHub Pages. Send them to the matching page.
+(function(){var p=location.pathname.toLowerCase().replace(/\/+$/,'').split('/').pop();
+var map={about:'about',team:'team',brands:'portfolio',portfolio:'portfolio',contact:'contact'};
+var base=location.pathname.indexOf('/',1)>0&&!map[location.pathname.split('/')[1]]?'/'+location.pathname.split('/')[1]+'/':'/';
+location.replace(base+(map[p]?'#'+map[p]:''));})();
+</script></head><body><p>Redirecting to <a href="/">Springdale Ventures</a>…</p></body></html>
