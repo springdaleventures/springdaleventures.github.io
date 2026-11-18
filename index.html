@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650;12..96,800&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gantari:wght@500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
 <style>
 :root{
   /* Palette: the logo's teal and orange, deepened and cooled. Mint replaces the old flat light teal. */
@@ -30,9 +30,9 @@
   --ember:#E0592A;
   --muted:#4E6A6D;
   --line:rgba(11,58,64,.14);
-  --display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
-  --body:"Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
-  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --display:"Gantari", "Avenir Next", "Segoe UI", sans-serif;
+  --body:"Newsreader", Georgia, "Helvetica Neue", Arial, sans-serif;
+  --mono:"Gantari", "Helvetica Neue", Arial, sans-serif;
   --wrap:1200px;
   /* Layout idea: big left-aligned type, one photo mosaic, a three-city map as the signature moment. */
   color-scheme:light;
@@ -331,6 +331,16 @@ input:focus,select:focus,textarea:focus{border-color:var(--teal);outline:none}
 .ph-photo img{width:100%;height:100%;object-fit:cover}
 .ph-photo figcaption{position:absolute;left:10px;bottom:10px;font:500 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;background:rgba(255,255,255,.92);padding:4px 8px;border-radius:6px}
 @media (max-width:860px){.ph-grid{grid-template-columns:1fr}}
+/* Brand type: Gantari titles and labels, Newsreader body */
+body{font-weight:400;font-size:18px}
+h1,h2{font-weight:800;text-transform:uppercase;letter-spacing:.01em;line-height:.98;color:#035C67}
+h1{font-size:clamp(42px,6vw,84px)}
+.page-head h1{font-size:clamp(40px,5.6vw,76px)}
+h2{font-size:clamp(30px,4vw,52px)}
+h1 em{font-style:normal;color:var(--ember)}
+h3{font-weight:700;letter-spacing:0;color:#035C67}
+.fact b,.why-card b,.pcard .word{font-weight:800;letter-spacing:.01em}
+.btn,nav.main a,.filters button,.signup-link,.menu-btn,label,.roster b,details.alumni summary{font-family:var(--mono)}
 </style>
 </head>
 <body>
