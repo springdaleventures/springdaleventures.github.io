@@ -342,6 +342,10 @@ h1 em{font-style:normal;color:var(--ember)}
 h3{font-weight:700;letter-spacing:0;color:#035C67}
 .fact b,.why-card b,.pcard .word{font-weight:800;letter-spacing:.01em}
 .btn,nav.main a,.filters button,.signup-link,.menu-btn,label,.roster b,details.alumni summary{font-family:var(--mono)}
+.legal a{color:inherit}
+.policy{max-width:720px;display:grid;gap:16px}
+.policy h3{margin-top:18px}
+.policy ul{margin:0;padding-left:22px;display:grid;gap:8px}
 </style>
 </head>
 <body>
@@ -673,6 +677,46 @@ h3{font-weight:700;letter-spacing:0;color:#035C67}
     </div>
   </section>
 </div>
+<div class="view" id="v-privacy">
+  <div class="page-head">
+    <div class="wrap">
+      <div class="eyebrow">Legal</div>
+      <h1>Privacy Policy</h1>
+      <p class="lede">Effective November 18, 2026</p>
+    </div>
+  </div>
+  <section style="padding-top:56px">
+    <div class="wrap"><div class="policy">
+      <p>This policy explains what information Springdale Ventures, LLC ("Springdale," "we," "us") collects through springdaleventures.com, how we use it, and the choices you have.</p>
+      <h3>Information we collect</h3>
+      <p><b>Information you send us.</b> When you submit our pitch form, email us, or ask to join our newsletter, we receive what you choose to share. That usually includes your name, email address, company name, website, and details about your business and fundraising.</p>
+      <p><b>Information collected automatically.</b> Like most websites, our hosting provider and the services that power parts of this site may receive basic technical information such as your IP address, browser type, and the pages you visit. We do not use advertising cookies or sell this information.</p>
+      <h3>How we use it</h3>
+      <ul>
+        <li>To review pitches and decide whether to follow up.</li>
+        <li>To respond to questions and keep in touch with founders, investors and partners.</li>
+        <li>To send our newsletter if you asked for it. You can unsubscribe at any time.</li>
+        <li>To run, secure and improve this website.</li>
+      </ul>
+      <h3>How we share it</h3>
+      <p>We do not sell or rent personal information. We share it only with service providers that help us operate, such as Airtable (pitch form), GitHub Pages (website hosting), Google (fonts and email) and our email newsletter provider, and only as needed for them to provide their services. We may also disclose information if required by law or to protect our rights.</p>
+      <h3>Pitch materials</h3>
+      <p>Please do not send anything you consider highly confidential. We treat what you send with care and limit access to our team.</p>
+      <h3>Third-party sites</h3>
+      <p>Our site links to portfolio company websites, LinkedIn and other sites. Their privacy practices are their own, and this policy does not cover them.</p>
+      <h3>Data retention and security</h3>
+      <p>We keep information for as long as it is useful for the purposes above or as required by law, and we use reasonable measures to protect it. No method of transmission or storage is completely secure.</p>
+      <h3>Your choices</h3>
+      <p>You can ask us to access, correct or delete the personal information we hold about you by emailing <a href="mailto:hello@springdaleventures.com">hello@springdaleventures.com</a>. Depending on where you live, you may have additional rights under local law, and we will honor them.</p>
+      <h3>Children</h3>
+      <p>This site is not directed to children under 13, and we do not knowingly collect their information.</p>
+      <h3>Changes</h3>
+      <p>We may update this policy from time to time. The effective date above shows when it last changed.</p>
+      <h3>Contact</h3>
+      <p>Springdale Ventures, LLC, Santa Fe, New Mexico. <a href="mailto:hello@springdaleventures.com">hello@springdaleventures.com</a></p>
+    </div></div>
+  </section>
+</div>
 </main>
 
 <footer class="site">
@@ -686,7 +730,7 @@ h3{font-weight:700;letter-spacing:0;color:#035C67}
       <div><h4>Explore</h4><ul><li><a href="#about">About</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#team">Team</a></li><li><a href="#contact">Pitch us</a></li></ul></div>
       <div><h4>Follow</h4><ul><li><a href="https://www.linkedin.com/company/springdale-ventures/">LinkedIn</a></li><li><a href="https://www.instagram.com/springdaleventures/">Instagram</a></li><li>hello@springdaleventures.com</li></ul></div>
     </div>
-    <div class="legal"><span>© <span id="yr">2026</span> Springdale Ventures, LLC</span><span>Privacy Policy</span></div>
+    <div class="legal"><span>© <span id="yr">2026</span> Springdale Ventures, LLC</span><a href="#privacy">Privacy Policy</a></div>
   </div>
 </footer>
 
@@ -766,7 +810,7 @@ renderGrid();
 (function(){const g=document.getElementById('grat');let s='';for(let lon=-115;lon<=-85;lon+=5){const x=(lon+125)*10;s+=`<line class="grat" x1="${x}" y1="45" x2="${x}" y2="235"/><text class="gl" x="${x+3}" y="236">${-lon}°W</text>`}for(let lat=45;lat>=30;lat-=5){const y=(50-lat)*10;s+=`<line class="grat" x1="100" y1="${y}" x2="425" y2="${y}"/><text class="gl" x="101" y="${y-3}">${lat}°N</text>`}g.innerHTML=s})();
 
 // Router
-const views=["home","about","portfolio","team","contact"];
+const views=["home","about","portfolio","team","contact","privacy"];
 function route(){
   const h=(location.hash||"#home").slice(1);
   const v=views.includes(h)?h:"home";
